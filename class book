@@ -1,0 +1,56 @@
+#include <iostream>
+
+ using namespace std;
+ 
+ class book
+{
+    private:
+    
+ int book_id;
+ char book_title[20];
+ int book_price;
+ 
+ public: 
+        
+       void getdata()
+      {  cout<<"enter book id\n";
+        cin>>book_id;
+        
+        cout<<"enter book title\n";
+        cin>>book_title;
+        
+        cout<<"enter book price\n";
+        cin>>book_price;
+        
+      }
+      
+        
+        
+        
+        void showdata()
+  {
+	cout<<"\n\n** Details of  book **";
+	
+	cout<<"\nbook id     :  "<<book_id;
+	cout<<"\nbook title       :  "<<book_title;
+    cout<<"\nbook_price       :  "<<book_price;
+	
+	
+	cout<<"\n-------------------------------\n\n";
+   }
+
+ };
+ 
+ int main()
+  {
+    book obj[10];
+    
+    cout<<" book details of user  \n\n\n ";
+   
+    for(int i=1;i<=3;i++)
+    {
+    obj[i].getdata();
+    obj[i].showdata();
+    }
+    return 0;
+   }
