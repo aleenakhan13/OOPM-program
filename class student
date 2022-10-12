@@ -1,0 +1,86 @@
+#include <iostream>
+
+using namespace std;
+
+ class Student
+{
+ char std_name[20];
+ int std_roll;
+ int std_total;
+ int std_outcome;
+ int std_percentage;
+ 
+  static int count;
+ public: 
+        
+       void getdata()
+      {  cout<<"enter student name \n";
+        cin>>std_name;
+        
+        cout<<"enter student roll number \n";
+        cin>>std_roll;
+        
+        cout<<"enter student total number \n";
+        cin>>std_total;
+        
+        cout<<"enter student outcomes number \n";
+        cin>>std_outcome;
+        
+        
+        cout<<"enter student percentage\n";
+        cin>>std_percentage;
+        
+      }
+      
+      void showdata()
+  {
+	cout<<"\n\n** Details of  students **\n\n";
+	
+	cout<<"\nstudent Name      :  \n"<<std_name;
+	cout<<"\nstudent roll number        :  "<<std_roll;
+	
+	cout<<"enter student total number \n"<<std_total;
+	cout<<"enter student outcome number \n"<<std_outcome;
+    cout<<"\nstudent percentage     : \n "<<std_percentage;
+	
+	
+	
+	cout<<"\n-------------------------------\n\n";
+   }
+
+        
+        
+  static int counting() 
+  
+    {
+        return count;
+        
+        
+    }
+    
+     
+        
+    Student()
+    {
+        count=count+1;
+        
+        
+    }
+};    
+int Student::count;
+  
+   int main()
+   {
+       Student s1,s2,s3;
+       s1.getdata();
+       s1.showdata();
+       
+       s2.getdata();
+       s2.showdata();
+       
+       s3.getdata();
+       s3.showdata();
+       
+       cout<<"\n total number of object ="<<Student::counting;
+       return 0;
+   }
