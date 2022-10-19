@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+class fruit {
+private:
+   char ch;
+   int num;
+public:
+   
+   friend class basket;
+   
+
+    
+};
+class basket {
+public:
+void getdata(fruit &obj)
+{
+    cout<<"enter the fruit name\n";
+    cin>>obj.ch;
+    
+    cout<<"fruit price is \n";
+    cin>>obj.num;
+}
+   void disp(fruit &obj){
+       cout<<"\n\n***rate of fruit*\n\n";
+       {
+    cout<<" fruit name:"<<obj.ch<<endl;
+    
+    
+    cout<<"fruit price is:"<<obj.num<<endl;
+   
+       }
+       //cout<<obj.ch<<endl;
+      //cout<<obj.num<<endl;
+     // cout<<obj.ch<<endl;
+      //cout<<+obj.num<<endl;
+   }
+};
+int main() {
+   basket obj;
+   fruit obj2;
+  obj.getdata(obj2);
+   obj.disp(obj2);
+   
+   return 0;
+}   
