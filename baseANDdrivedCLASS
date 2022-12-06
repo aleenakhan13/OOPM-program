@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+  
+class base {
+public:
+    int a;
+    void seta()
+    {
+        cout<<"enter the value of a=";
+        cin>>a;
+    }
+    void geta()
+    {
+        cout<<a;
+    }
+    
+    };
+    
+    
+    
+class d1 : public virtual base {
+    public:
+    int b;
+     void setb()
+    {
+        cout<<"enter the value of b=";
+        cin>>b;
+    }
+    void getb()
+    {
+        cout<<b;
+    }
+    
+    };
+    
+
+class d2: public virtual base {
+    public:
+    int c;
+     void setc()
+    {
+        cout<<"enter the value of c=";
+        cin>>c;
+    }
+    void get_c()
+    {
+        cout<<c;
+    }
+    
+    };
+    
+
+class d3 : public d1, public d2 {
+    public:
+    int addi;
+    void add()
+    {
+        addi=a+b+c;
+        cout<<"the addition of a b c ="<<addi;
+        
+    }
+};
+  
+int main()
+{
+    d3 obj;
+    obj.seta();
+    obj.geta();
+   obj.setb();
+    obj.getb();
+   obj.setc();
+    obj.get_c();
+    obj.add();
+  
+    return 0;
+}
